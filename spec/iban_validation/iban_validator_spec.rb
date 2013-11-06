@@ -17,8 +17,13 @@ module IbanValidation
       expect(model).to be_invalid
     end
 
-    it 'is invalid' do
+    it 'is valid' do
       model = Model.new 'GB82WEST12345698765432'
+      expect(model).to be_valid
+    end
+
+    it 'is valid' do
+      model = Model.new 'DE89370400440532013000'
       expect(model).to be_valid
     end
   end
